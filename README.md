@@ -1,11 +1,10 @@
 Worktips pool
 ====================
-Formerly known as cryptonote-forknote-pool, forked from TurtleCoin.
+Formerly known as cryptonote-forknote-pool, forked from TurtleCoin and adjusted for Worktips coin.
 
-High performance Node.js (with native C addons) mining pool for Cryptonote based coins, created with the Forknote software such as Bytecoin, Dashcoin, etc..
+High performance Node.js (with native C addons) mining pool for Cryptonote based coin.
 
 Comes with lightweight example front-end script which uses the pool's AJAX API.
-
 
 
 #### Table of Contents
