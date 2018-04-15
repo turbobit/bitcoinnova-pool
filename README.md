@@ -8,22 +8,15 @@ Comes with lightweight example front-end script which uses the pool's AJAX API.
 
 
 #### Table of Contents
-* [Features](#features)
-* [Community Support](#community--support)
-* [Pools Using This Software](#pools-using-this-software)
+* [Features](#basic-features)
 * [Usage](#usage)
   * [Requirements](#requirements)
-  * [Downloading & Installing](#1-downloading--installing)
+  * [Downloading & Installing](#1-pool-setup)
   * [Configuration](#2-configuration)
-  * [Configure Easyminer](#3-optional-configure-cryptonote-easy-miner-for-your-pool)
-  * [Starting the Pool](#4-start-the-pool)
-  * [Host the front-end](#5-host-the-front-end)
-  * [Customizing your website](#6-customize-your-website)
-  * [Upgrading](#upgrading)
-* [Setting up Testnet](#setting-up-testnet)
-* [JSON-RPC Commands from CLI](#json-rpc-commands-from-cli)
-* [Monitoring Your Pool](#monitoring-your-pool)
-* [Configuring Blockchain Explorer](#configuring-blockchain-explorer)
+  * [Configure Easyminer](#3-troubleshooting)
+  * [Host the front-end](#4-host-the-front-end)
+  * [Customizing your website](#5-customize-your-website)
+  * [Upgrading](#6-using-walletd-instead-of-simplewallet-for-payments)
 * [Credits](#credits)
 * [License](#license)
 
@@ -575,14 +568,9 @@ to `index.html` or other front-end files thus reducing the difficulty of merging
 Then simply serve the files via nginx, Apache, Google Drive, or anything that can host static content.
 
 
-#### 6) Upgrading
+#### 6) Using walletd instead of simplewallet for payments
 
-When updating to the latest code its important to not only `git pull` the latest from this repo, but to also update
-the Node.js modules, and any config files that may have been changed.
-* Inside your pool directory (where the init.js script is) do `git pull` to get the latest code.
-* Remove the dependencies by deleting the `node_modules` directory with `rm -r node_modules`.
-* Run `npm update` to force updating/reinstalling of the dependencies.
-* Compare your `config.json` to the latest example ones in this repo or the ones in the setup instructions where each config field is explained. You may need to modify or add any new changes.
+This pool uses walletd for RPC queries with added RPC security. More information on how to upgrade from simplewallet to walletd please see the following post: [Use walletd instead of simplewallet for payments](https://github.com/turtlecoin/turtle-pool/pull/5)
 
 
 Credits
