@@ -182,7 +182,7 @@ cd pool
 npm update
 ```
 
--  Start the pool
+-  Start the pool (ONLY AFTER YOU HAVE CONFIGURED IT - see below for configuration)
 
 ```
 sudo node init.js
