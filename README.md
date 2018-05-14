@@ -85,7 +85,7 @@ Usage
 
 #### 1) POOL SETUP
 
-Rebuild the coin from the following GitHub repository: https://github.com/Vordas/worktips using the instructions in the repository Readme.md file.
+Rebuild the coin from the following GitHub repository: https://github.com/worktips/worktips using the instructions in the repository Readme.md file.
 
 -  Start the daemon in the RPC mode
 
@@ -169,7 +169,7 @@ redis-server
 -  Clone the pool repository
 
 ```
-git clone https://github.com/Vordas/worktips-pool.git pool
+git clone https://github.com/worktips/worktips-pool.git pool
 ```
 
 -  Run the pool NPM update
