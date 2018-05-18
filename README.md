@@ -251,17 +251,17 @@ Explanation for each field:
     "ports": [
         {
             "port": 3333, //Port for mining apps to connect to
-            "difficulty": 100, //Initial difficulty miners are set to
+            "difficulty": 5000, //Initial difficulty miners are set to
             "desc": "Low end hardware" //Description of port
         },
         {
             "port": 5555,
-            "difficulty": 2000,
+            "difficulty": 25000,
             "desc": "Mid range hardware"
         },
         {
             "port": 7777,
-            "difficulty": 10000,
+            "difficulty": 100000,
             "desc": "High end hardware"
         }
     ],
@@ -270,8 +270,8 @@ Explanation for each field:
        individual miners based on their hashrate in order to lower networking and CPU
        overhead. */
     "varDiff": {
-        "minDiff": 2, //Minimum difficulty
-        "maxDiff": 100000,
+        "minDiff": 5000, //Minimum difficulty
+        "maxDiff": 2000000,
         "targetTime": 100, //Try to get 1 share per this many seconds
         "retargetTime": 30, //Check to see if we should retarget every this many seconds
         "variancePercent": 30, //Allow time to very this % from target without retargeting
@@ -316,12 +316,12 @@ Explanation for each field:
 /* Module that sends payments to miners according to their submitted shares. */
 "payments": {
     "enabled": true,
-    "interval": 600, //how often to run in seconds
+    "interval": 1800, //how often to run in seconds
     "maxAddresses": 50, //split up payments if sending to more than this many addresses
     "mixin": 1, //number of transactions yours is indistinguishable from
     "transferFee": 50000000, //fee to pay for each transaction
-    "minPayment": 1250000000000, //miner balance required before sending payment
-    "maxTransactionAmount": 1000000000000000, //split transactions by this amount(to prevent "too big transaction" error)
+    "minPayment": 100000000000, //miner balance required before sending payment
+    "maxTransactionAmount": 2000000000000000, //split transactions by this amount(to prevent "too big transaction" error)
     "denomination": 100000000 //truncate to this precision and store remainder
 },
 
@@ -335,7 +335,7 @@ Explanation for each field:
     /* Block depth required for a block to unlocked/mature. Found in daemon source as
        the variable CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW */
     "depth": 10,
-    "poolFee": 0.5, //1.8% pool fee (2% total fee total including donations)
+    "poolFee": 0.8, //1.8% pool fee (2% total fee total including donations)
     "devDonation": 0.1, //0.1% donation to send to pool dev - only works with Monero
     "coreDevDonation": 0.1 //0.1% donation to send to core devs - works with Bytecoin, Monero, Dashcoin, QuarazCoin, Fantoncoin, AEON and OneEvilCoin
 },
