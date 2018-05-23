@@ -111,27 +111,7 @@ Note: if you want to use the RPC password please set it in the pool wallet confi
 -  Setup pool environment
 
 ```
-sudo apt-get install nodejs
-```
-
-```
-sudo apt-get install nodejs-legacy
-```
-
-```
-sudo apt-get install npm
-```
-
-```
-npm config set strict-ssl false
-```
-
-```
-sudo apt-get install tk8.5 tcl8.5
-```
-
-```
-sudo apt-get install libssl-dev 
+sudo apt-get install nodejs nodejs-legacy npm tk8.5 tcl8.5 libssl-dev
 ```
 
 -  Install Redis database
