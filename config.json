@@ -1,8 +1,8 @@
 {
-    "coin": "worktips",
-    "symbol": "WTIP",
-    "coinUnits": 100000000,
-    "coinDifficultyTarget": 120,
+    "coin": "monkeytips",
+    "symbol": "MTIP",
+    "coinUnits": 100,
+    "coinDifficultyTarget": 40,
 
     "logging": {
         "files": {
@@ -81,21 +81,21 @@
         "enabled": true,
         "interval": 1800,
         "maxAddresses": 50,
-        "mixin": 1,
-        "transferFee": 50000000,
-        "minPayment": 100000000000,
-        "maxTransactionAmount": 2000000000000000,
-        "denomination": 100000000
+        "mixin": 7,
+        "transferFee": 100,
+        "minPayment": 100000,
+        "maxTransactionAmount": 5000000,
+        "denomination": 100
     },
 
     "blockUnlocker": {
         "enabled": true,
         "interval": 30,
         "depth": 10,
-        "poolFee": 0.8,
-        "devDonation": 0.1,
-        "coreDevDonation": 0.1,
-        "extraFeaturesDevDonation":0.1
+        "poolFee": 0.0,
+        "devDonation": 0.0,
+        "coreDevDonation": 0.0,
+        "extraFeaturesDevDonation":0.0
     },
 
     "api": {
@@ -110,12 +110,12 @@
 
     "daemon": {
         "host": "127.0.0.1",
-        "port": 18238
+        "port": 13002
     },
 
     "wallet": {
         "host": "127.0.0.1",
-        "port": 8082,
+        "port": 8420,
         "password": ""
     },
 

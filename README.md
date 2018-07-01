@@ -1,6 +1,6 @@
-Worktips pool
+monkeytips pool
 ====================
-Formerly known as cryptonote-forknote-pool, forked from TurtleCoin and adjusted for Worktips coin.
+Formerly known as cryptonote-forknote-pool, forked from TurtleCoin then forked from Worktips coin.
 
 High performance Node.js (with native C addons) mining pool for Cryptonote based coin.
 
@@ -85,24 +85,24 @@ Usage
 
 #### 1) POOL SETUP
 
-Rebuild the coin from the following GitHub repository: https://github.com/worktips/worktips using the instructions in the repository Readme.md file.
+Rebuild the coin from the following GitHub repository: https://github.com/monkeytips/monkeytips using the instructions in the repository Readme.md file.
 
 -  Start the daemon in the RPC mode
 
 ```
-./worktipsd --rpc-bind-port=18238
+./monkeytipsd --rpc-bind-port=13002
 ```
 
 -  Generate the pool wallet using walletd
 
 ```
-./walletd --container-file=YOURWALLETNAME --container-password=YOURWALLETPASSWORD --daemon-port=18238 --bind-port=8082 --rpc-legacy-security --generate-container
+./walletd --container-file=YOURWALLETNAME --container-password=YOURWALLETPASSWORD --daemon-port=13002 --bind-port=8420 --rpc-legacy-security --generate-container
 ```
 
 -  Start the wallet using walletd
 
 ```
-./walletd --container-file=YOURWALLETNAME --container-password=YOURWALLETPASSWORD --daemon-port=18238 --bind-port=8082 --rpc-legacy-security
+./walletd --container-file=YOURWALLETNAME --container-password=YOURWALLETPASSWORD --daemon-port=13002 --bind-port=8420 --rpc-legacy-security
 ```
 
 Note: if you want to use the RPC password please set it in the pool wallet config section in the file config.js
@@ -153,7 +153,7 @@ redis-server
 -  Clone the pool repository
 
 ```
-git clone https://github.com/worktips/worktips-pool.git pool
+git clone https://github.com/monkeytips/monkeytips-pool.git pool
 ```
 
 -  Run the pool NPM update
@@ -179,16 +179,16 @@ sudo node init.js
 Explanation for each field:
 ```javascript
 /* Used for storage in redis so multiple coins can share the same redis instance. */
-"coin": "worktips",
+"coin": "monkeytips",
 
 /* Used for front-end display */
 "symbol": "WTIP",
 
 /* Minimum units in a single coin, see COIN constant in DAEMON_CODE/src/cryptonote_config.h */
-"coinUnits": 100000000,
+"coinUnits": 100,
 
 /* Coin network time to mine one block, see DIFFICULTY_TARGET constant in DAEMON_CODE/src/cryptonote_config.h */
-"coinDifficultyTarget": 120,
+"coinDifficultyTarget": 40,
 
 "logging": {
 
@@ -319,9 +319,9 @@ Explanation for each field:
     /* Block depth required for a block to unlocked/mature. Found in daemon source as
        the variable CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW */
     "depth": 10,
-    "poolFee": 0.8, //1.8% pool fee (2% total fee total including donations)
-    "devDonation": 0.1, //0.1% donation to send to pool dev - only works with Monero
-    "coreDevDonation": 0.1 //0.1% donation to send to core devs - works with Bytecoin, Monero, Dashcoin, QuarazCoin, Fantoncoin, AEON and OneEvilCoin
+    "poolFee": 0.0, //1.8% pool fee (2% total fee total including donations)
+    "devDonation": 0.0, //0.1% donation to send to pool dev - only works with Monero
+    "coreDevDonation": 0.0 //0.1% donation to send to core devs - works with Bytecoin, Monero, Dashcoin, QuarazCoin, Fantoncoin, AEON and OneEvilCoin
 },
 
 /* AJAX API used for front-end website. */
@@ -338,13 +338,13 @@ Explanation for each field:
 /* Coin daemon connection details. */
 "daemon": {
     "host": "127.0.0.1",
-    "port": 18238
+    "port": 13002
 },
 
 /* Wallet daemon connection details. */
 "wallet": {
     "host": "127.0.0.1",
-    "port": 8082,
+    "port": 8420,
     "password": "<replace with rpc password>"
 },
 
