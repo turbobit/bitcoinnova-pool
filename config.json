@@ -1,8 +1,8 @@
 {
-    "coin": "monkeytips",
-    "symbol": "MTIP",
-    "coinUnits": 100,
-    "coinDifficultyTarget": 40,
+    "coin": "BitcoinNova",
+    "symbol": "BTN",
+    "coinUnits": 1000000,
+    "coinDifficultyTarget": 120,
 
     "logging": {
         "files": {
@@ -19,7 +19,7 @@
   "poolServer": {
     "enabled": true,
     "clusterForks": "auto",
-    "poolAddress": "",
+    "poolAddress": "EBdcNByhnk15PdFbk9rYcHW65U9Ep51BUDMsiPDAxe9ZctcEXmRQbPu1b7LxSWVu8PULwbMS7xunkLxMddVqmVp4Hbh4KHp",
     "blockRefreshInterval": 1000,
     "minerTimeout": 900,
     "ports": [
